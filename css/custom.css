@@ -1,0 +1,9 @@
+.col-xs-3 {
+    width: 25%;
+}
+
+#calc-prices-btn {
+	background-color: green;
+	border-color: green;
+	color: white;
+}

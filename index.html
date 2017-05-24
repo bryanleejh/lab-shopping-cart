@@ -1,20 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/application.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/application.js"></script>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+  <div class="container">
+    <div class="title row">
+      <div class="title col-xs-12">
+        <h1>Shopping Cart</h1>
+      </div>
+    </div>
+    <div class="container items-list">
+      <div class="row">
+      <div class="title-item-name col-xs-4">
+          Item Name
+        </div>
+        <div class="title-item-price col-xs-3">
+          Item Price
+        </div>
+        <div class="title-item-qty col-xs-3">
+          Item Qty
+        </div>
+        <div class="title-item-subtotal col-xs-2">
+          Item Subtotal
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Salmon
+        </div>
+        <div class="item-price col-xs-3">
+          $60.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Tuna
+        </div>
+        <div class="item-price col-xs-3">
+          $50.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Carp
+        </div>
+        <div class="item-price col-xs-3">
+          $40.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Beef
+        </div>
+        <div class="item-price col-xs-3">
+          $40.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Chicken
+        </div>
+        <div class="item-price col-xs-3">
+          $25.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Cereal
+        </div>
+        <div class="item-price col-xs-3">
+          $45.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Milk
+        </div>
+        <div class="item-price col-xs-3">
+          $20.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+      <div class="item row">
+        <div class="item-name col-xs-4">
+          Sugar
+        </div>
+        <div class="item-price col-xs-3">
+          $10.00
+        </div>
+        <div class="item-qty col-xs-3">
+          <label>Qty</label>
+          <input value="0"></input>
+          <button>Cancel</button>
+        </div>
+        <div class="item-subtotal col-xs-2">
+          $0.00
+        </div>
+      </div>
+    </div>
+    <div class="create row">
+      <input class="input-item col-xs-4" placeholder="type new food here">
+    </input>
+    <input class="input-price col-xs-3" placeholder="type new price here">
+  </input>
+  <button class="input-button col-xs-3">
+    create
+  </button>
+  <div class="input-placeholder col-xs-2">
+  </div>
+</div>
+<div class="calc row col-xs-3 col-xs-offset-9">
+  <button id="calc-prices-btn">Calculate Prices</button>
+</div>
+<div class="price row">
+  <h1 class="total-price-label">Total Price:</h1>
+  <h1 id="total-price">$0.00</h1>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
 </html>
