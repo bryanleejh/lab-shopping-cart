@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var returnSubtotalPrice = function(price, quantity, i) {
 		var itemSubtotalPrices = $(".item-subtotal");
 		$(itemSubtotalPrices[i]).text("$" + (price * quantity).toFixed(2));
-	}
+	};
 
 	var returnTotalPrice = function() {
 		console.log("return connected");
@@ -41,7 +41,11 @@ $(document).ready(function(){
 		'</div>';
 
 		$('.container .items-list').append(newItem);
-	}
+	};
+
+	var removeItem = function(event) {
+		
+	};
 
 	$('.input-button').on('click', function(){
 		createItem();
@@ -49,6 +53,12 @@ $(document).ready(function(){
 
 	$('#calc-prices-btn').on('click', function(){
 		returnTotalPrice();
+	});
+
+	$('.cancel').on('click', function(){
+		console.log("remove connected");
+		$(event.target).parents('.item').remove();
+		calculateTotal();
 	});
 
 });
