@@ -1,21 +1,21 @@
 $(document).ready(function(){
 	var returnSubtotalPrice = function(price, quantity, i) {
 		var itemSubtotalPrices = $(".item-subtotal");
-		$(itemSubtotalPrices[i]).text("$" + (price * quantity).toFixed(2));
+		var annoying = $(itemSubtotalPrices.eq(i)).text("$" + (price * quantity).toFixed(2));
+		console.log(annoying);
 	};
 
 	var returnTotalPrice = function() {
 		console.log("return connected");
 		var itemPrices = $(".item-price");
-		var itemQuantities = $(".item-qty");
+		var itemQuantities = $(".input-field");
 		var itemLength = itemPrices.length;
 		
 		var totalPrice = 0;
 		for (var i = 0; i < itemLength; i++) {
-			var price = $(itemPrices[i]).text().replace("$", "");
-			var quantity = itemQuantities[i].value;
+			var price = itemPrices.eq(i).text().replace("$", "");
+			var quantity = itemQuantities.eq(i).val();
 			console.log(quantity);
-			var quantity = itemQuantities[i].value;
 			returnSubtotalPrice(price, quantity, i);
 			totalPrice += price * quantity
 		}
